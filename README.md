@@ -1,9 +1,11 @@
 # kafka-zomato
 
 **Overview**
+
 This guide outlines the steps to integrate Apache Kafka with Node.js for Zomato, focusing specifically on managing the "ride-updates" topic. Kafka serves as a scalable, fault-tolerant streaming platform ideal for real-time data pipelines and applications.
 
-**Prerequisites**
+**Pre-requisites**
+
 Apache Kafka installation
 Node.js installation
 Docker installation
