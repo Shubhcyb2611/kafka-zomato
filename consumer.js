@@ -1,8 +1,8 @@
-const { combineTableNames } = require("sequelize/lib/utils");
 const { kafka } = require("./client");
+const group = process.argv[2];
 
 async function init() {
-  const consumer = kafka.consumer({ groupId: "user-1" });
+  const consumer = kafka.consumer({ groupId: group });
   await consumer.connect();
 
   await consumer.subscribe({ topics: ["rider-updates"], fromBeginning: true });
@@ -10,7 +10,7 @@ async function init() {
   await consumer.run({
     eachMessage: async ({ topic, partition, message }) => {
       console.log(
-        `[${topic}] : Partition : ${partition} `,
+        `${group} [${topic}] : Partition : ${partition} `,
         message.value.toString()
       );
     },
