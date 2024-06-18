@@ -10,7 +10,8 @@ async function init() {
   await consumer.run({
     eachMessage: async ({ topic, partition, message }) => {
       console.log(
-        `[${topic}] : Partition : ${partition} : message : ${message.toString()}`
+        `[${topic}] : Partition : ${partition} `,
+        message.value.toString()
       );
     },
   });
