@@ -26,6 +26,3 @@ Setup Steps
 
 5. Integration
    Integrate Kafka with your existing Zomato architecture to handle real-time data streams effectively.
-
-Resources
-For further details on Apache Kafka, refer to the Apache Kafka Documentation.
